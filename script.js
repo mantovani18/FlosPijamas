@@ -7,8 +7,6 @@
    tamanhos disponíveis).
    ===================================================== */
 
-const NUMERO_WHATSAPP = "5543996212570";
-
 const produtos = [
   {
     id: 1,
@@ -16,7 +14,8 @@ const produtos = [
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     preco: 149.90,
     imagem: "pijamas/AzulMasculino.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20azul%20masculino"
   },
   {
     id: 2,
@@ -24,7 +23,8 @@ const produtos = [
     descricao: "Toque acetinado e caimento fluido, para uma sensação de luxo a cada movimento.",
     preco: 189.90,
     imagem: "pijamas/femininoCoração.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20coracao%20feminino"
   },
   {
     id: 3,
@@ -32,7 +32,8 @@ const produtos = [
     descricao: "Modelagem solta e tecido respirável, pensado para o descanso mais completo.",
     preco: 139.90,
     imagem: "pijamas/femininoVermelho.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20vermelho%20confort"
   },
   {
     id: 4,
@@ -40,7 +41,8 @@ const produtos = [
     descricao: "Design sofisticado com detalhes em renda, para quem une conforto e estilo.",
     preco: 179.90,
     imagem: "pijamas/AzulMasculino.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20elegance"
   },
   {
     id: 5,
@@ -48,7 +50,8 @@ const produtos = [
     descricao: "Tom suave e tecido leve, uma escolha delicada para todas as estações.",
     preco: 159.90,
     imagem: "pijamas/femininoCoração.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20rose"
   },
   {
     id: 6,
@@ -56,7 +59,8 @@ const produtos = [
     descricao: "Um clássico atemporal, com corte reto e acabamento impecável.",
     preco: 129.90,
     imagem: "pijamas/femininoVermelho.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20classic"
   },
   {
     id: 7,
@@ -64,7 +68,8 @@ const produtos = [
     descricao: "Malha extra macia que abraça o corpo do início ao fim da noite.",
     preco: 134.90,
     imagem: "pijamas/AzulMasculino.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20soft"
   },
   {
     id: 8,
@@ -72,7 +77,8 @@ const produtos = [
     descricao: "Nossa peça mais nobre, com tecido de alta qualidade e acabamento artesanal.",
     preco: 219.90,
     imagem: "pijamas/femininoCoração.png",
-    tamanhos: ["P", "M", "G", "GG"]
+    tamanhos: ["P", "M", "G", "GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   }
 ];
 
@@ -162,24 +168,30 @@ function configurarEventosProdutos(){
 
     // Clique em "Quero este pijama"
     if (evento.target.classList.contains("btn-comprar")){
-      const tamanho = tamanhosSelecionados[produtoId];
+      const produto = produtos.find(p => p.id === produtoId);
+      if (!produto) return;
 
-      if (!tamanho){
-        mostrarToast("Por favor, selecione um tamanho antes de continuar.");
-        return;
+      const tamanho = tamanhosSelecionados[produtoId];
+      const url = new URL(produto.link);
+
+      if (tamanho) {
+        url.searchParams.set("tamanho", tamanho);
       }
 
-      const produto = produtos.find(p => p.id === produtoId);
-      abrirWhatsApp(produto, tamanho);
+      window.open(url.toString(), "_blank", "noopener");
     }
   });
 }
 
-/* Monta a mensagem e abre o WhatsApp em nova aba */
-function abrirWhatsApp(produto, tamanho){
-  const mensagem = `Olá! Tenho interesse no produto ${produto.nome}. Gostaria do tamanho ${tamanho}. O valor anunciado é ${formatarPreco(produto.preco)}. Gostaria de mais informações.`;
-  const url = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, "_blank", "noopener");
+/* Abre o link do Mercado Livre do produto em nova aba */
+function abrirProdutoMercadoLivre(produto, tamanho){
+  const url = new URL(produto.link);
+
+  if (tamanho) {
+    url.searchParams.set("tamanho", tamanho);
+  }
+
+  window.open(url.toString(), "_blank", "noopener");
 }
 
 /* Toast de aviso elegante */
