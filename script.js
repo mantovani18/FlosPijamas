@@ -12,7 +12,7 @@ const produtos = [
     id: 1,
     nome: "Pijama rosa com Preto Listrado",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/rosaPretoListrado.jpeg",
+    imagem: "pijamas/rosaPretoListrado.png",
     tamanhos: ["PP", "P", "10"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20azul%20masculino"
   },
