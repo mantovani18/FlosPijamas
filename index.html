@@ -70,6 +70,29 @@
     <h2 class="section-title">Nossa Coleção</h2>
     <p class="section-lead">Cada peça é pensada para o seu ritual de descanso — escolha o tamanho e finalize sua compra diretamente pelo WhatsApp.</p>
 
+    <div class="filtros-produtos" aria-label="Filtros da coleção">
+      <label class="filtro-produto">
+        <span>Gênero</span>
+        <select id="filtroGenero">
+          <option value="">Todos</option>
+        </select>
+      </label>
+      <label class="filtro-produto">
+        <span>Cor</span>
+        <select id="filtroCor">
+          <option value="">Todas</option>
+        </select>
+      </label>
+      <label class="filtro-produto">
+        <span>Tamanho</span>
+        <select id="filtroTamanho">
+          <option value="">Todos</option>
+        </select>
+      </label>
+      <button type="button" class="btn-limpar-filtros" id="limparFiltros">Limpar filtros</button>
+    </div>
+    <p class="resultado-filtros" id="resultadoFiltros" aria-live="polite"></p>
+
     <div class="produtos-grid" id="produtosGrid">
       <!-- Cards gerados via JavaScript a partir de js/script.js (array "produtos") -->
     </div>

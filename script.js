@@ -159,7 +159,216 @@ const produtos = [
     imagem: "pijamas/BrancaFlores.png",
   tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
-  }
+  },
+  {
+    id: 20,
+    nome: "Pijama Branco com Azul - Masculino",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoAzulBolso.png",
+  tamanhos: ["GG","P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 21,
+    nome: "Pijama Azul Feminino",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/AzulFem.png",
+  tamanhos: ["GG","G","M","PP"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+   {
+    id: 22,
+    nome: "Pijama Branco com Bolso Azul - Masculino",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoBolso.png",
+  tamanhos: ["GG","M","P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 23,
+    nome: "Pijama Branco com Rosa Estampa de Olhos",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoRosaOlho.png",
+  tamanhos: ["G"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+   {
+    id: 24,
+    nome: "Pijama Branco Liso",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoLiso.png",
+  tamanhos: ["PP","M","GG","P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 25,
+    nome: "Pijama Rosa Quadriculado",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/RosaQuadriculado.png",
+  tamanhos: ["M"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 26,
+    nome: "Pijama Azul Ondulado",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/AzulOndulado.png",
+  tamanhos: ["PP","10"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 27,
+    nome: "Pijama Preto com Vermelho Masculino",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/PretoVermelhoMasc.png",
+  tamanhos: ["P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 28,
+    nome: "Pijama Preto com Vermelho Feminino",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/PretoVermelhoFem.png",
+  tamanhos: ["PP"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+   {
+    id: 29,
+    nome: "Pijama Branco com Preto estampa de Bolinhas",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoPretoBolinha.png",
+  tamanhos: ["GG", "M"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 30,
+    nome: "Pijama Rosa Liso",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/RosaLiso.png",
+  tamanhos: ["GG", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 31,
+    nome: "Pijama Rosa Tie-Dye - Manga Curta + Shorts",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/RosaTie-Dye.png",
+  tamanhos: ["PP", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 32,
+    nome: "Pijama Rosa Tie-Dye - Manga Curta + Calça",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/RosaTie-Dye.png",
+  tamanhos: ["PP", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 33,
+    nome: "Pijama verde com estampa de coração - Manga Curta + Shorts",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/VerdeCoração.png",
+  tamanhos: ["GG", "P", "M"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 34,
+    nome: "Pijama verde com estampa de coração - Manga Curta + Calça",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/VerdeCoração.png",
+  tamanhos: ["GG", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 35,
+    nome: "Pijama Azul com estampa de coração - Manga Curta + Calça",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/AzulCoração.png",
+  tamanhos: ["GG", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 36,
+    nome: "Pijama Azul com estampa de coração - Manga Curta + Shorts",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/AzulCoração.png",
+  tamanhos: ["GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 37,
+    nome: "Pijama Azul Claro com estampa de bolinha",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/AzulClaroBolinhas.png",
+  tamanhos: ["PP", "G", "M", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 38,
+    nome: "Pijama Branco com estampa de coração - Manga Curta + Calça",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoCoração.png",
+  tamanhos: ["GG", "G"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 39,
+    nome: "Pijama Branco com estampa de coração - Manga Curta + Shorts",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoCoração.png",
+  tamanhos: ["GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 40,
+    nome: "Pijama Branco com estampa de coração Vermelho",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/BrancoCoraçãoVermelho.png",
+  tamanhos: ["PP", "G", "M", "P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 41,
+    nome: "Pijama Marrom com estampa de onça - Manga Curta + Shorts",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/MarromOnça.png",
+  tamanhos: ["PP","P"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 42,
+    nome: "Pijama Marrom com estampa de onça - Manga Longa + Shorts",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/MarromOnça.png",
+  tamanhos: ["PP","10"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 43,
+    nome: "Camiseta Branca",
+    descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/CamisetaBranca.png",
+  tamanhos: ["P","M","GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 44,
+    nome: "Camiseta Azul",
+    descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/CamisetaAzul.png",
+  tamanhos: ["P","M","GG","G"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+  {
+    id: 45,
+    nome: "Camiseta Rosa",
+    descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/CamisetaRosa.png",
+  tamanhos: ["P","M","GG","G"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+
 
 ];
 
@@ -209,6 +418,86 @@ function criarCardProduto(produto, indice){
   `;
 
   return card;
+}
+
+function normalizarTexto(texto){
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+function obterGenero(produto){
+  const nome = normalizarTexto(produto.nome);
+  if (nome.includes("masculino")) return "Masculino";
+  return "Feminino";
+}
+
+function obterCor(produto){
+  const nome = normalizarTexto(produto.nome);
+  const cores = [
+    ["colorido", "Colorido"],
+    ["tie-dye", "Tie-dye"],
+    ["azul", "Azul"],
+    ["rosa", "Rosa"],
+    ["pink", "Pink"],
+    ["verde", "Verde"],
+    ["lilas", "Lilás"],
+    ["vinho", "Vinho"],
+    ["marrom", "Marrom"],
+    ["preto", "Preto"],
+    ["branc", "Branco"]
+  ];
+  const corEncontrada = cores.find(([nomeCor]) => nome.includes(nomeCor));
+  return corEncontrada ? corEncontrada[1] : null;
+}
+
+function preencherFiltro(id, valores){
+  const filtro = document.getElementById(id);
+  valores.sort((a, b) => a.localeCompare(b, "pt-BR")).forEach(valor => {
+    const opcao = document.createElement("option");
+    opcao.value = valor;
+    opcao.textContent = valor;
+    filtro.appendChild(opcao);
+  });
+}
+
+function configurarFiltros(){
+  const filtroGenero = document.getElementById("filtroGenero");
+  const filtroCor = document.getElementById("filtroCor");
+  const filtroTamanho = document.getElementById("filtroTamanho");
+  const resultado = document.getElementById("resultadoFiltros");
+  const grid = document.getElementById("produtosGrid");
+  const limparFiltros = document.getElementById("limparFiltros");
+
+  preencherFiltro("filtroGenero", [...new Set(produtos.map(obterGenero))]);
+  preencherFiltro("filtroCor", [...new Set(produtos.map(obterCor).filter(Boolean))]);
+  preencherFiltro("filtroTamanho", [...new Set(produtos.flatMap(produto => produto.tamanhos))]);
+
+  function aplicarFiltros(){
+    const filtrados = produtos.filter(produto => {
+      const correspondeGenero = !filtroGenero.value || obterGenero(produto) === filtroGenero.value;
+      const correspondeCor = !filtroCor.value || obterCor(produto) === filtroCor.value;
+      const correspondeTamanho = !filtroTamanho.value || produto.tamanhos.includes(filtroTamanho.value);
+      return correspondeGenero && correspondeCor && correspondeTamanho;
+    });
+
+    grid.replaceChildren(...filtrados.map((produto, indice) => criarCardProduto(produto, indice)));
+    resultado.textContent = filtrados.length
+      ? `${filtrados.length} ${filtrados.length === 1 ? "produto encontrado" : "produtos encontrados"}`
+      : "Nenhum produto encontrado com esses filtros.";
+    configurarScrollReveal();
+  }
+
+  [filtroGenero, filtroCor, filtroTamanho].forEach(filtro => {
+    filtro.addEventListener("change", aplicarFiltros);
+  });
+
+  limparFiltros.addEventListener("click", () => {
+    filtroGenero.value = "";
+    filtroCor.value = "";
+    filtroTamanho.value = "";
+    aplicarFiltros();
+  });
+
+  aplicarFiltros();
 }
 
 /* Renderiza todos os produtos na grade */
@@ -297,6 +586,7 @@ function marcarElementosParaReveal(){
 /* Inicialização */
 document.addEventListener("DOMContentLoaded", () => {
   renderizarProdutos();
+  configurarFiltros();
   configurarEventosProdutos();
   configurarMenuMobile();
   marcarElementosParaReveal();

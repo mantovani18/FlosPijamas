@@ -163,7 +163,7 @@ a:focus-visible, button:focus-visible{
    HERO
    ===================================================== */
 .hero{
-  padding: 96px 0 110px;
+  padding: 96px 0 56px;
   overflow: hidden;
 }
 
@@ -278,7 +278,7 @@ a:focus-visible, button:focus-visible{
 /* =====================================================
    SEÇÃO DE PRODUTOS
    ===================================================== */
-.colecao{ padding: 100px 0; }
+.colecao{ padding: 64px 0 100px; }
 
 .section-title{
   font-size: clamp(2rem, 3.4vw, 2.6rem);
@@ -292,8 +292,67 @@ a:focus-visible, button:focus-visible{
   color: var(--stone);
 }
 
+.filtros-produtos{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 14px;
+  align-items: end;
+  margin-top: 46px;
+  padding: 20px;
+  background: var(--sage-soft);
+  border: 1px solid var(--line);
+}
+
+.filtro-produto{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--stone);
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.filtro-produto select{
+  min-height: 44px;
+  padding: 0 34px 0 12px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font: inherit;
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.btn-limpar-filtros{
+  min-height: 44px;
+  padding: 0 18px;
+  color: var(--sage-deep);
+  background: transparent;
+  border: 1px solid var(--sage-deep);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.btn-limpar-filtros:hover{
+  color: var(--white);
+  background: var(--sage-deep);
+}
+
+.resultado-filtros{
+  min-height: 20px;
+  margin-top: 18px;
+  color: var(--stone);
+  font-size: 0.84rem;
+}
+
 .produtos-grid{
-  margin-top: 64px;
+  margin-top: 22px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--gap);
@@ -590,6 +649,7 @@ a:focus-visible, button:focus-visible{
    RESPONSIVO — TABLET
    ===================================================== */
 @media (max-width: 1024px){
+  .filtros-produtos{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .produtos-grid{ grid-template-columns: repeat(2, 1fr); }
   .diferenciais-grid{ grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
   .hero-inner{ gap: 40px; }
@@ -601,6 +661,7 @@ a:focus-visible, button:focus-visible{
    RESPONSIVO — CELULAR
    ===================================================== */
 @media (max-width: 768px){
+  .filtros-produtos{ grid-template-columns: 1fr; }
   .header-inner{ height: 72px; }
   .brand-logo{ height: 40px; }
 
