@@ -393,7 +393,8 @@ function criarCardProduto(produto, indice){
   card.className = "produto-card reveal";
   card.dataset.id = produto.id;
 
-  const tamanhosDisponiveis = produto.tamanhos
+  const tamanhosDisponiveis = [...produto.tamanhos]
+    .sort(compararTamanhos)
     .map(t => `<span class="tamanho-item">${t}</span>`)
     .join("");
 
@@ -449,9 +450,14 @@ function obterCor(produto){
   return corEncontrada ? corEncontrada[1] : null;
 }
 
-function preencherFiltro(id, valores){
+function compararTamanhos(a, b){
+  const ordem = ["PP", "P", "M", "G", "GG", "10"];
+  return ordem.indexOf(a) - ordem.indexOf(b);
+}
+
+function preencherFiltro(id, valores, comparador = (a, b) => a.localeCompare(b, "pt-BR")){
   const filtro = document.getElementById(id);
-  valores.sort((a, b) => a.localeCompare(b, "pt-BR")).forEach(valor => {
+  valores.sort(comparador).forEach(valor => {
     const opcao = document.createElement("option");
     opcao.value = valor;
     opcao.textContent = valor;
@@ -469,7 +475,11 @@ function configurarFiltros(){
 
   preencherFiltro("filtroGenero", [...new Set(produtos.map(obterGenero))]);
   preencherFiltro("filtroCor", [...new Set(produtos.map(obterCor).filter(Boolean))]);
-  preencherFiltro("filtroTamanho", [...new Set(produtos.flatMap(produto => produto.tamanhos))]);
+  preencherFiltro(
+    "filtroTamanho",
+    [...new Set(produtos.flatMap(produto => produto.tamanhos))],
+    compararTamanhos
+  );
 
   function aplicarFiltros(){
     const filtrados = produtos.filter(produto => {
