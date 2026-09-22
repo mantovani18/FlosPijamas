@@ -354,13 +354,6 @@ a:focus-visible, button:focus-visible{
   flex: 1;
 }
 
-.produto-preco{
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--ink);
-  margin-top: 4px;
-}
-
 .tamanhos-label{
   font-size: 0.75rem;
   color: var(--stone);
@@ -373,7 +366,7 @@ a:focus-visible, button:focus-visible{
   flex-wrap: wrap;
 }
 
-.tamanho-btn{
+.tamanho-item{
   min-width: 38px;
   padding: 7px 10px;
   font-family: var(--font-body);
@@ -381,17 +374,7 @@ a:focus-visible, button:focus-visible{
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 4px;
-  cursor: pointer;
   color: var(--ink);
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
-}
-
-.tamanho-btn:hover{ border-color: var(--sage-deep); }
-
-.tamanho-btn.selecionado{
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--white);
 }
 
 .btn-comprar{
@@ -664,9 +647,8 @@ a:focus-visible, button:focus-visible{
 
   .produto-info{ padding: 16px 16px 18px; gap: 8px; }
   .produto-nome{ font-size: 1.05rem; }
-  .produto-preco{ font-size: 1.1rem; }
 
-  .tamanho-btn{ min-width: 34px; padding: 9px 8px; font-size: 0.78rem; }
+  .tamanho-item{ min-width: 34px; padding: 9px 8px; font-size: 0.78rem; }
   .btn-comprar{ padding: 14px 0; font-size: 0.85rem; }
 
   .diferenciais-grid{ grid-template-columns: 1fr; gap: 32px; }
