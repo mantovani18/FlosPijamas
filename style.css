@@ -377,6 +377,7 @@ a:focus-visible, button:focus-visible{
   width: 100%;
   overflow: hidden;
   background: var(--sage-soft);
+  cursor: zoom-in;
 }
 
 .produto-imagem img,
@@ -392,6 +393,50 @@ a:focus-visible, button:focus-visible{
 .produto-card:hover .produto-imagem svg{
   transform: scale(1.05);
 }
+
+.lightbox[hidden]{ display: none; }
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(42, 42, 40, 0.82);
+  cursor: zoom-out;
+}
+
+.lightbox-imagem{
+  width: min(92vw, 760px);
+  max-height: 88vh;
+  object-fit: contain;
+  border: 8px solid var(--white);
+  background: var(--white);
+  cursor: default;
+}
+
+.lightbox-fechar{
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  width: 42px;
+  height: 42px;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-fechar:hover{ background: rgba(255, 255, 255, 0.16); }
+
+body.lightbox-aberto{ overflow: hidden; }
 
 .produto-info{
   padding: 22px 22px 24px;
@@ -662,6 +707,13 @@ a:focus-visible, button:focus-visible{
    ===================================================== */
 @media (max-width: 768px){
   .filtros-produtos{ grid-template-columns: 1fr; }
+  .lightbox{ padding: 58px 20px 24px; }
+  .lightbox-imagem{
+    width: min(72vw, 300px);
+    max-height: 62vh;
+    border-width: 5px;
+  }
+  .lightbox-fechar{ top: 14px; right: 18px; }
   .header-inner{ height: 72px; }
   .brand-logo{ height: 40px; }
 
@@ -719,6 +771,5 @@ a:focus-visible, button:focus-visible{
 }
 
 @media (max-width: 420px){
-  .produtos-grid{ grid-template-columns: 1fr; }
   .header-inner, .hero-inner, .section-inner, .sobre-inner, .footer-inner{ padding: 0 20px; }
 }

@@ -527,6 +527,41 @@ function configurarEventosProdutos(){
   });
 }
 
+function configurarVisualizacaoFotos(){
+  const grid = document.getElementById("produtosGrid");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImagem = document.getElementById("lightboxImagem");
+  const fechar = document.getElementById("lightboxFechar");
+
+  function fecharLightbox(){
+    lightbox.hidden = true;
+    document.body.classList.remove("lightbox-aberto");
+    lightboxImagem.removeAttribute("src");
+  }
+
+  grid.addEventListener("click", evento => {
+    const areaImagem = evento.target.closest(".produto-imagem");
+    if (!areaImagem) return;
+
+    const imagem = areaImagem.querySelector("img");
+    if (!imagem) return;
+
+    lightboxImagem.src = imagem.currentSrc || imagem.src;
+    lightboxImagem.alt = imagem.alt;
+    lightbox.hidden = false;
+    document.body.classList.add("lightbox-aberto");
+    fechar.focus();
+  });
+
+  fechar.addEventListener("click", fecharLightbox);
+  lightbox.addEventListener("click", evento => {
+    if (evento.target === lightbox) fecharLightbox();
+  });
+  document.addEventListener("keydown", evento => {
+    if (evento.key === "Escape" && !lightbox.hidden) fecharLightbox();
+  });
+}
+
 /* Toast de aviso elegante */
 let toastTimeout;
 function mostrarToast(texto){
@@ -588,6 +623,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarProdutos();
   configurarFiltros();
   configurarEventosProdutos();
+  configurarVisualizacaoFotos();
   configurarMenuMobile();
   marcarElementosParaReveal();
   configurarScrollReveal();
