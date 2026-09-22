@@ -116,7 +116,7 @@ const produtos = [
     id: 14,
     nome: "Pijama Vinho - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/vinho.png",
+    imagem: "pijamas/Vinho.png",
     tamanhos: ["G","GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -252,7 +252,7 @@ const produtos = [
     id: 31,
     nome: "Pijama Rosa Tie-Dye - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/RosaTie-Dye.png",
+    imagem: "pijamas/RosaTie-dye.png",
   tamanhos: ["PP", "P"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -260,7 +260,7 @@ const produtos = [
     id: 32,
     nome: "Pijama Rosa Tie-Dye - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/RosaTie-Dye.png",
+    imagem: "pijamas/RosaTie-dye.png",
   tamanhos: ["PP", "P"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
