@@ -7,14 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="/admin/admin.css">
   <style>*[hidden]{display:none!important}#modal[hidden]{display:none}.sidebar{width:300px}.brand{gap:16px;padding-left:8px}.brand-logo{width:86px;height:86px;object-fit:contain;border-radius:24px;background:#f4f7f2;padding:8px}.brand strong{font-size:25px;letter-spacing:.04em}.brand small{font-size:13px;letter-spacing:.22em;margin-top:3px}.auth-panel{width:min(420px,90vw);margin:12vh auto;background:#fff;border:1px solid #e6ebe6;border-radius:16px;padding:36px;box-shadow:0 16px 40px rgba(38,49,45,.07)}.auth-panel h2{font:700 28px 'Playfair Display';margin:5px 0 10px}.auth-panel p:not(.eyebrow){color:#7a8580;margin:0 0 22px}.auth-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e8f0e8;color:#557b63;font:700 24px 'Playfair Display';margin-bottom:20px}.auth-panel label{display:grid;gap:6px;color:#7a8580;font-size:12px;font-weight:600;margin:14px 0}.auth-panel input{border:1px solid #e6ebe6;border-radius:8px;padding:12px;color:#26312d}.auth-panel button{width:100%;margin-top:10px}.auth-error{color:#bd5d62;font-size:12px;margin-top:12px}</style>
   <style>.nav-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;line-height:0;flex:0 0 20px}.nav-icon svg{display:block}.admin-product-image{cursor:zoom-in;transition:transform .2s ease}.admin-product-image:hover{transform:scale(1.06)}.image-modal{position:relative;background:#fff;border-radius:16px;padding:18px;max-width:min(720px,92vw);max-height:90vh;box-shadow:0 20px 60px rgba(22,34,27,.25)}.image-modal img{display:block;max-width:100%;max-height:78vh;object-fit:contain;border-radius:10px}.image-modal .modal-close{position:absolute;right:8px;top:5px;z-index:1}</style>
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
-      <div class="brand"><img class="brand-logo" src="../img/logo.png" alt="FLOS Pijamas"><div><strong>FLOS</strong><small>GESTAO</small></div></div>
+      <div class="brand"><img class="brand-logo" src="/img/logo.png" alt="FLOS Pijamas"><div><strong>FLOS</strong><small>GESTAO</small></div></div>
       <button class="close-sidebar" id="closeSidebar" aria-label="Fechar menu">&times;</button>
       <nav class="side-nav" aria-label="Navegação principal">
         <button class="nav-item active" data-view="dashboard"><span class="nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13h6V4H4v9Zm10 7h6v-7h-6v7ZM4 20h6v-3H4v3Zm10-11h6V4h-6v5Z"/></svg></span>Visao geral</button>
@@ -35,14 +35,14 @@
   </div>
   <div id="toast" class="toast" role="status"></div>
   <div id="modal" class="modal-backdrop" hidden></div>
-  <script src="../script.js"></script>
-  <script src="supabase-config.js"></script>
+  <script src="/script.js"></script>
+  <script src="/admin/supabase-config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase-client.js"></script>
-  <script src="supabase-auth.js"></script>
-  <script src="admin.js"></script>
-  <script src="supabase-import.js"></script>
-  <script src="atomic-transactions.js"></script>
-  <script src="transaction-fixes.js"></script>
+  <script src="/admin/supabase-client.js"></script>
+  <script src="/admin/supabase-auth.js"></script>
+  <script src="/admin/admin.js"></script>
+  <script src="/admin/supabase-import.js"></script>
+  <script src="/admin/atomic-transactions.js"></script>
+  <script src="/admin/transaction-fixes.js"></script>
 </body>
 </html>
