@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FLOS Pijamas — Conforto para seus melhores momentos</title>
 <meta name="description" content="Pijamas que unem conforto, elegância e qualidade. Compre direto pelo WhatsApp.">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#263a31">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -189,5 +191,10 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
 </body>
 </html>
