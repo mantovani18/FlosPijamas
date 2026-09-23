@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLOS Pijamas | Gestão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <style>*[hidden]{display:none!important}#modal[hidden]{display:none}.sidebar{width:300px}.brand{gap:16px;padding-left:8px}.brand-logo{width:86px;height:86px;object-fit:contain;border-radius:24px;background:#f4f7f2;padding:8px}.brand strong{font-size:25px;letter-spacing:.04em}.brand small{font-size:13px;letter-spacing:.22em;margin-top:3px}.auth-panel{width:min(420px,90vw);margin:12vh auto;background:#fff;border:1px solid #e6ebe6;border-radius:16px;padding:36px;box-shadow:0 16px 40px rgba(38,49,45,.07)}.auth-panel h2{font:700 28px 'Playfair Display';margin:5px 0 10px}.auth-panel p:not(.eyebrow){color:#7a8580;margin:0 0 22px}.auth-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e8f0e8;color:#557b63;font:700 24px 'Playfair Display';margin-bottom:20px}.auth-panel label{display:grid;gap:6px;color:#7a8580;font-size:12px;font-weight:600;margin:14px 0}.auth-panel input{border:1px solid #e6ebe6;border-radius:8px;padding:12px;color:#26312d}.auth-panel button{width:100%;margin-top:10px}.auth-error{color:#bd5d62;font-size:12px;margin-top:12px}</style>
+  <style>.nav-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;line-height:0;flex:0 0 20px}.nav-icon svg{display:block}.admin-product-image{cursor:zoom-in;transition:transform .2s ease}.admin-product-image:hover{transform:scale(1.06)}.image-modal{position:relative;background:#fff;border-radius:16px;padding:18px;max-width:min(720px,92vw);max-height:90vh;box-shadow:0 20px 60px rgba(22,34,27,.25)}.image-modal img{display:block;max-width:100%;max-height:78vh;object-fit:contain;border-radius:10px}.image-modal .modal-close{position:absolute;right:8px;top:5px;z-index:1}</style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><img class="brand-logo" src="../img/logo.png" alt="FLOS Pijamas"><div><strong>FLOS</strong><small>GESTAO</small></div></div>
+      <button class="close-sidebar" id="closeSidebar" aria-label="Fechar menu">&times;</button>
+      <nav class="side-nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13h6V4H4v9Zm10 7h6v-7h-6v7ZM4 20h6v-3H4v3Zm10-11h6V4h-6v5Z"/></svg></span>Visao geral</button>
+        <button class="nav-item" data-view="products"><span class="nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 4 4 2 4-2 4 3-2 4-2-1v10H8V10l-2 1-2-4 4-3Z"/></svg></span>Produtos</button>
+        <button class="nav-item" data-view="stock"><span class="nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5-9 5-9-5Zm0 0v9l9 5 9-5V8M12 13v9"/></svg></span>Estoque</button>
+        <button class="nav-item" data-view="sales"><span class="nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.5-1.5-3-1.5-1.4 0-2.5.7-2.5 1.7 0 2.8 5.5 1.1 5.5 4 0 1.1-1.1 1.8-2.7 1.8-1.5 0-2.6-.5-3.3-1.5M12 6v12"/></svg></span>Vendas</button>
+        <button class="nav-item" data-view="movements"><span>↕</span>Movimentacoes</button>
+        <button class="nav-item" data-view="reports"><span class="nav-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM14 3v4h4M9 12h6M9 16h6"/></svg></span>Relatorios</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Configuracoes</button>
+      </nav>
+      <div class="sidebar-footer"><span class="status-dot"></span><span>Operacao local ativa</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu" id="openSidebar" aria-label="Abrir menu">☰</button><div><p class="eyebrow">PAINEL ADMINISTRATIVO</p><h1 id="viewTitle">Visao geral</h1></div><div class="user-chip"><button class="btn btn-ghost" id="importCatalog" type="button">Importar catalogo</button><span class="avatar">FL</span><span>Admin</span></div></header>
+      <div id="app" class="view-container"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <div id="modal" class="modal-backdrop" hidden></div>
+  <script src="../script.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js"></script>
+  <script src="supabase-auth.js"></script>
+  <script src="admin.js"></script>
+  <script src="supabase-import.js"></script>
+  <script src="atomic-transactions.js"></script>
+  <script src="transaction-fixes.js"></script>
+</body>
+</html>

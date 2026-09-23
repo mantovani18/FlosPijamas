@@ -372,6 +372,9 @@ const produtos = [
 
 ];
 
+// Exposto apenas para integrações internas, sem alterar o catálogo público.
+window.FLOS_PRODUCTS = produtos;
+
 /* Gera um placeholder elegante em SVG para o produto (usado até as
    fotos reais serem adicionadas em /images) */
 function criarPlaceholderSVG(nome, indice){
@@ -630,6 +633,7 @@ function marcarElementosParaReveal(){
 
 /* Inicialização */
 document.addEventListener("DOMContentLoaded", () => {
+  if (!document.getElementById("produtosGrid")) return;
   renderizarProdutos();
   configurarFiltros();
   configurarEventosProdutos();
