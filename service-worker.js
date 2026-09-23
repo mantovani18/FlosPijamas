@@ -1,4 +1,4 @@
-const CACHE_NAME = 'flos-pijamas-v1';
+const CACHE_NAME = 'flos-pijamas-v4';
 const APP_SHELL = [
   '/',
   '/index.html',

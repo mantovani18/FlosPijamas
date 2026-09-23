@@ -451,6 +451,12 @@ body.lightbox-aberto{ overflow: hidden; }
   font-weight: 500;
 }
 
+.produto-preco{
+  color: var(--sage-deep);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 .produto-descricao{
   font-size: 0.88rem;
   color: var(--stone);
@@ -479,6 +485,15 @@ body.lightbox-aberto{ overflow: hidden; }
   border: 1px solid var(--line);
   border-radius: 4px;
   color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tamanho-item:hover,
+.tamanho-item.selecionado{
+  background: var(--sage-deep);
+  border-color: var(--sage-deep);
+  color: var(--white);
 }
 
 .btn-comprar{
