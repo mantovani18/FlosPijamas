@@ -672,7 +672,7 @@ function configurarEventosProdutos(){
       }
 
       const mensagem = `Olá! Tenho interesse nesta peça:\n\nPeça: ${produto.nome}\nValor: ${produto.Preco || "R$ 0,00"}\nTamanho: ${tamanho}`;
-      const whatsappUrl = `https://wa.me/5543996212570?text=${encodeURIComponent(mensagem)}`;
+      const whatsappUrl = `https://wa.me/5543991257579?text=${encodeURIComponent(mensagem)}`;
       window.open(whatsappUrl, "_blank", "noopener");
     }
   });
