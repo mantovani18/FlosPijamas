@@ -102,12 +102,20 @@
 </section>
 
 <aside class="pedido-flutuante" id="pedidoFlutuante" hidden aria-label="Pedido atual">
-  <div class="pedido-cabecalho">
-    <strong id="pedidoTitulo">Seu pedido</strong>
-    <span id="pedidoContador"></span>
+  <button type="button" class="pedido-toggle" id="pedidoToggle" aria-expanded="false" aria-controls="pedidoPainel" aria-label="Abrir sacola de compras" title="Abrir sacola de compras">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <path d="M5 8h14l-1 12H6L5 8Z" stroke-linejoin="round"/>
+      <path d="M9 9V6a3 3 0 0 1 6 0v3" stroke-linecap="round"/>
+    </svg>
+    <span class="pedido-contador" id="pedidoContador"></span>
+  </button>
+  <div class="pedido-painel" id="pedidoPainel" hidden>
+    <div class="pedido-cabecalho">
+      <strong id="pedidoTitulo">Seu pedido</strong>
+    </div>
+    <div class="pedido-itens" id="pedidoItens"></div>
+    <button type="button" class="pedido-whatsapp" id="enviarPedidoWhatsapp">Enviar pedido pelo WhatsApp</button>
   </div>
-  <div class="pedido-itens" id="pedidoItens"></div>
-  <button type="button" class="pedido-whatsapp" id="enviarPedidoWhatsapp">Enviar pedido pelo WhatsApp</button>
 </aside>
 
 <!-- ===================== SOBRE ===================== -->

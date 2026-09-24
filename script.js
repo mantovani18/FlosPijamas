@@ -648,15 +648,25 @@ function renderizarProdutos(){
 function configurarPedidoWhatsApp(){
   const pedidoFlutuante = document.getElementById("pedidoFlutuante");
   const botaoPedido = document.getElementById("enviarPedidoWhatsapp");
+  const botaoToggle = document.getElementById("pedidoToggle");
+  const painelPedido = document.getElementById("pedidoPainel");
   const listaPedido = document.getElementById("pedidoItens");
   const contadorPedido = document.getElementById("pedidoContador");
-  if (!pedidoFlutuante || !botaoPedido || !listaPedido) return;
+  if (!pedidoFlutuante || !botaoPedido || !botaoToggle || !painelPedido || !listaPedido) return;
+
+  function alternarPainelPedido(aberto){
+    painelPedido.hidden = !aberto;
+    botaoToggle.setAttribute("aria-expanded", String(aberto));
+    botaoToggle.setAttribute("aria-label", aberto ? "Fechar sacola de compras" : "Abrir sacola de compras");
+    botaoToggle.title = aberto ? "Fechar sacola de compras" : "Abrir sacola de compras";
+  }
 
   function atualizarBotaoPedido(){
     pedidoFlutuante.hidden = !pedidoWhatsApp.length;
     contadorPedido.textContent = pedidoWhatsApp.length
       ? `${pedidoWhatsApp.length} ${pedidoWhatsApp.length === 1 ? "item" : "itens"}`
       : "";
+    if (!pedidoWhatsApp.length) alternarPainelPedido(false);
     listaPedido.innerHTML = pedidoWhatsApp.map((item, indice) => `
       <div class="pedido-item">
         <span>${item.nome} · ${item.tamanho}</span>
@@ -664,6 +674,10 @@ function configurarPedidoWhatsApp(){
       </div>
     `).join("");
   }
+
+  botaoToggle.addEventListener("click", () => {
+    alternarPainelPedido(painelPedido.hidden);
+  });
 
   listaPedido.addEventListener("click", evento => {
     const botaoRemover = evento.target.closest(".pedido-remover");
@@ -699,8 +713,9 @@ function configurarEventosProdutos(){
 
     const tamanhoSelecionado = evento.target.closest(".tamanho-item");
     if (tamanhoSelecionado){
+      const jaSelecionado = tamanhoSelecionado.classList.contains("selecionado");
       card.querySelectorAll(".tamanho-item").forEach(item => {
-        const selecionado = item === tamanhoSelecionado;
+        const selecionado = item === tamanhoSelecionado && !jaSelecionado;
         item.classList.toggle("selecionado", selecionado);
         item.setAttribute("aria-pressed", String(selecionado));
       });
