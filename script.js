@@ -431,6 +431,15 @@ const produtos = [
   tamanhos: ["44","46","M","P","G"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
+  {
+   id: 48,
+    Preco: "R$ 0,00",
+    nome: "Pijama Verde Listrado",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/VerdeListrado.png",
+  tamanhos: ["10","PP"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
 ];
 
 // Exposto apenas para integrações internas, sem alterar o catálogo público.
@@ -462,6 +471,7 @@ async function carregarCatalogoPublico(){
     const catalogo = await response.json();
     if (!Array.isArray(catalogo) || !catalogo.length) return;
 
+    const idsNoBanco = new Set(catalogo.map(produto => Number(produto.id)));
     const produtosDoBanco = catalogo.map(produto => {
       const produtoLocal = produtos.find(item => Number(item.id) === Number(produto.id));
       const tamanhos = (produto.product_sizes || []).map(item => item.size);
@@ -477,7 +487,8 @@ async function carregarCatalogoPublico(){
       };
     });
 
-    produtos.splice(0, produtos.length, ...produtosDoBanco);
+    const produtosLocaisPendentes = produtos.filter(produto => !idsNoBanco.has(Number(produto.id)));
+    produtos.splice(0, produtos.length, ...produtosDoBanco, ...produtosLocaisPendentes);
   } catch (error) {
     console.warn("Catalogo do Supabase indisponivel; usando catalogo local.", error);
   }
