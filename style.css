@@ -768,6 +768,7 @@ body.lightbox-aberto{ overflow: hidden; }
   .hero-visual{ order: -1; margin-bottom: 8px; }
   .hero-ring{ width: 240px; height: 240px; }
   .hero-image-frame{ width: 190px; }
+  .hero-illustration{ object-fit: contain; }
 
   .colecao, .sobre, .diferenciais{ padding: 64px 0; }
 
