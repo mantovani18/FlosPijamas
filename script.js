@@ -442,6 +442,8 @@ const produtos = [
   },
 ];
 
+const pedidoWhatsApp = [];
+
 // Exposto apenas para integrações internas, sem alterar o catálogo público.
 window.FLOS_PRODUCTS = produtos;
 
@@ -539,7 +541,7 @@ function criarCardProduto(produto, indice){
       <p class="produto-descricao">${produto.descricao}</p>
       <p class="tamanhos-label">Tamanhos disponíveis</p>
       <div class="tamanhos-lista">${tamanhosDisponiveis}</div>
-      <button type="button" class="btn-comprar">Comprar pelo WhatsApp</button>
+      <button type="button" class="btn-comprar">Adicionar ao pedido</button>
     </div>
   `;
 
@@ -643,9 +645,51 @@ function renderizarProdutos(){
   });
 }
 
-/* Abre o WhatsApp com os dados do produto escolhido */
+function configurarPedidoWhatsApp(){
+  const pedidoFlutuante = document.getElementById("pedidoFlutuante");
+  const botaoPedido = document.getElementById("enviarPedidoWhatsapp");
+  const listaPedido = document.getElementById("pedidoItens");
+  const contadorPedido = document.getElementById("pedidoContador");
+  if (!pedidoFlutuante || !botaoPedido || !listaPedido) return;
+
+  function atualizarBotaoPedido(){
+    pedidoFlutuante.hidden = !pedidoWhatsApp.length;
+    contadorPedido.textContent = pedidoWhatsApp.length
+      ? `${pedidoWhatsApp.length} ${pedidoWhatsApp.length === 1 ? "item" : "itens"}`
+      : "";
+    listaPedido.innerHTML = pedidoWhatsApp.map((item, indice) => `
+      <div class="pedido-item">
+        <span>${item.nome} · ${item.tamanho}</span>
+        <button type="button" class="pedido-remover" data-pedido-indice="${indice}" aria-label="Remover ${item.nome}">Remover</button>
+      </div>
+    `).join("");
+  }
+
+  listaPedido.addEventListener("click", evento => {
+    const botaoRemover = evento.target.closest(".pedido-remover");
+    if (!botaoRemover) return;
+    pedidoWhatsApp.splice(Number(botaoRemover.dataset.pedidoIndice), 1);
+    atualizarBotaoPedido();
+  });
+
+  botaoPedido.addEventListener("click", () => {
+    const itens = pedidoWhatsApp.map(item =>
+      `- ${item.nome} | Tamanho: ${item.tamanho} | ${item.preco}`
+    ).join("\n");
+    const mensagem = `Olá! Quero fazer este pedido:\n\n${itens}`;
+    const whatsappUrl = `https://wa.me/5543991257579?text=${encodeURIComponent(mensagem)}`;
+    window.open(whatsappUrl, "_blank", "noopener");
+    pedidoWhatsApp.length = 0;
+    atualizarBotaoPedido();
+  });
+
+  return atualizarBotaoPedido;
+}
+
+/* Adiciona a peça escolhida ao pedido ou envia todas pelo WhatsApp */
 function configurarEventosProdutos(){
   const grid = document.getElementById("produtosGrid");
+  const atualizarBotaoPedido = configurarPedidoWhatsApp();
 
   grid.addEventListener("click", (evento) => {
     const card = evento.target.closest(".produto-card");
@@ -673,9 +717,20 @@ function configurarEventosProdutos(){
         return;
       }
 
-      const mensagem = `Olá! Tenho interesse nesta peça:\n\nPeça: ${produto.nome}\nValor: ${produto.Preco || "R$ 0,00"}\nTamanho: ${tamanho}`;
-      const whatsappUrl = `https://wa.me/5543991257579?text=${encodeURIComponent(mensagem)}`;
-      window.open(whatsappUrl, "_blank", "noopener");
+      const itemExistente = pedidoWhatsApp.find(item => item.id === produto.id && item.tamanho === tamanho);
+      if (itemExistente){
+        mostrarToast("Essa peça já está no pedido.");
+        return;
+      }
+
+      pedidoWhatsApp.push({
+        id: produto.id,
+        nome: produto.nome,
+        preco: produto.Preco || "R$ 0,00",
+        tamanho
+      });
+      atualizarBotaoPedido?.();
+      mostrarToast("Peça adicionada ao pedido.");
     }
   });
 }

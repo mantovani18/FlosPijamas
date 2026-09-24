@@ -101,6 +101,15 @@
   </div>
 </section>
 
+<aside class="pedido-flutuante" id="pedidoFlutuante" hidden aria-label="Pedido atual">
+  <div class="pedido-cabecalho">
+    <strong id="pedidoTitulo">Seu pedido</strong>
+    <span id="pedidoContador"></span>
+  </div>
+  <div class="pedido-itens" id="pedidoItens"></div>
+  <button type="button" class="pedido-whatsapp" id="enviarPedidoWhatsapp">Enviar pedido pelo WhatsApp</button>
+</aside>
+
 <!-- ===================== SOBRE ===================== -->
 <section class="sobre" id="sobre">
   <div class="sobre-inner">
@@ -191,7 +200,7 @@
 </div>
 
 <script src="admin/supabase-config.js"></script>
-<script src="script.js?v=14"></script>
+<script src="script.js?v=16"></script>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js');
