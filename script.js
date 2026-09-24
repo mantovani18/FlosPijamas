@@ -418,7 +418,7 @@ const produtos = [
     Preco: "R$ 69,90",
     nome: "T-Shirt Rosa Arco-Iris",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/CamisetaRosaArcoIris.png",
+    imagem: "pijamas/CamisetaRosaArcoiris.png",
   tamanhos: ["44","46","M","P","GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
