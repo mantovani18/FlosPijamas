@@ -28,7 +28,7 @@ const produtos = [
   },
   {
     id: 3,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama Verde Quadriculado",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeQuadriculado.png",
@@ -55,8 +55,8 @@ const produtos = [
   },
   {
     id: 6,
-    Preco: "R$ 0,00",
-    nome: "Pijama Azul com Vermelho Bolinhas - Manga Curta + Shorts",
+    Preco: "R$ 229,00",
+    nome: "Pijama Azul com Laranja - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulVermelho.png",
     tamanhos: ["GG"],
@@ -64,10 +64,10 @@ const produtos = [
   },
   {
     id: 7,
-    Preco: "R$ 0,00",
-     nome: "Pijama Azul com Vermelho Bolinhas - Manga Longa + Calça",
+    Preco: "R$ 229,00",
+     nome: "Pijama Azul com Laranja - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/AzulVermelho.png",
+    imagem: "pijamas/AzulComLaranja.png",
     tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20classic"
   },
@@ -76,7 +76,7 @@ const produtos = [
     Preco: "R$ 0,00",
     nome: "Pijama Verde com Bolinhas - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/VerdeBolinhas.png",
+    imagem: "pijamas/VerdeComBolinha.png",
     tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -109,7 +109,7 @@ const produtos = [
   },
   {
     id: 12,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Pink com Azul - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
@@ -118,7 +118,7 @@ const produtos = [
   },
    {
     id: 13,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Pink com Azul - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
@@ -200,7 +200,7 @@ const produtos = [
    {
     id: 22,
     Preco: "R$ 0,00",
-    nome: "Pijama Branco com Bolso Azul - Masculino",
+    nome: "Pijama Branco com Bolso Creme - Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoBolso.png",
   tamanhos: ["GG","M","P"],
@@ -209,9 +209,9 @@ const produtos = [
   {
     id: 23,
     Preco: "R$ 0,00",
-    nome: "Pijama Branco com Rosa Estampa de Olhos",
+    nome: "Pijama Branco com Rosa Estampa de Olho Grego",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/BrancoRosaOlho.png",
+    imagem: "pijamas/OlhoGrego.png",
   tamanhos: ["G"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -283,7 +283,7 @@ const produtos = [
     Preco: "R$ 0,00",
     nome: "Pijama Rosa Tie-Dye - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/RosaTie-dye.png",
+    imagem: "pijamas/Tie-DyeCurta.png",
   tamanhos: ["PP", "P"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -298,16 +298,16 @@ const produtos = [
   },
   {
     id: 33,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama verde com estampa de coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/VerdeCoração.png",
+    imagem: "pijamas/VerdeCoracaoCurto.png",
   tamanhos: ["GG", "P", "M"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 34,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama verde com estampa de coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeCoração.png",
@@ -316,7 +316,7 @@ const produtos = [
   },
   {
     id: 35,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Azul com estampa de coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulCoração.png",
@@ -325,16 +325,16 @@ const produtos = [
   },
   {
     id: 36,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Azul com estampa de coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/AzulCoração.png",
+    imagem: "pijamas/AzulCoracaoCurto.png",
   tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 37,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama Azul Claro com estampa de bolinha",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulClaroBolinhas.png",
@@ -343,7 +343,7 @@ const produtos = [
   },
   {
     id: 38,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Branco com estampa de coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoração.png",
@@ -352,16 +352,16 @@ const produtos = [
   },
   {
     id: 39,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Branco com estampa de coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/BrancoCoração.png",
+    imagem: "pijamas/BrancoCoracaoCurto.png",
   tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 40,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama Branco com estampa de coração Vermelho",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoraçãoVermelho.png",
@@ -388,7 +388,7 @@ const produtos = [
   },
   {
     id: 43,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "Camiseta Branca",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaBranca.png",
@@ -397,7 +397,7 @@ const produtos = [
   },
   {
     id: 44,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "Camiseta Azul",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaAzul.png",
@@ -406,7 +406,7 @@ const produtos = [
   },
   {
     id: 45,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "Camiseta Rosa",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaRosa.png",
@@ -415,7 +415,7 @@ const produtos = [
   },
 {
     id: 46,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "T-Shirt Rosa Arco-Iris",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaRosaArcoIris.png",
@@ -424,7 +424,7 @@ const produtos = [
   },
 {
    id: 47,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "T-Shirt Azul Arco-Iris",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaAzulArcoIris.png",
@@ -433,7 +433,7 @@ const produtos = [
   },
   {
    id: 48,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama Verde Listrado",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeListrado.png",
@@ -478,11 +478,13 @@ async function carregarCatalogoPublico(){
       return {
         ...produtoLocal,
         id: produto.id,
-        nome: produto.name,
+        nome: produtoLocal?.nome || produto.name || "",
         descricao: produto.description || produtoLocal?.descricao || "",
-        imagem: produto.image || produtoLocal?.imagem || "",
+        imagem: produtoLocal?.imagem || produto.image || "",
         link: produto.link || produtoLocal?.link || "",
-        Preco: formatarPreco(produto.price),
+        Preco: produtoLocal?.Preco && produtoLocal.Preco !== "R$ 0,00"
+          ? produtoLocal.Preco
+          : formatarPreco(produto.price),
         tamanhos: tamanhos.length ? tamanhos : (produtoLocal?.tamanhos || [])
       };
     });
