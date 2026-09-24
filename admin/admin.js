@@ -4,13 +4,14 @@ const money = value => Number(value || 0).toLocaleString('pt-BR',{style:'currenc
 const today = () => new Date().toISOString().slice(0,10);
 const uid = prefix => `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2,7)}`;
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+const catalogPrice = product => Number(String(product.Preco || '0').replace(/[^0-9,.-]/g,'').replace('.','').replace(',','.')) || 0;
 
 function initialState(){
-  return {settings:{lowStock:2}, products:catalog.map(product => ({...product, category:product.nome.toLowerCase().includes('camiseta')?'Camisetas':'Pijamas', active:true, cost:0, price:0, sizes:Object.fromEntries(product.tamanhos.map(size=>[size,0]))})), sales:[], movements:[]};
+  return {settings:{lowStock:2}, products:catalog.map(product => ({...product, category:product.nome.toLowerCase().includes('camiseta')?'Camisetas':'Pijamas', active:true, cost:0, price:catalogPrice(product), sizes:Object.fromEntries(product.tamanhos.map(size=>[size,0]))})), sales:[], movements:[]};
 }
 function loadState(){
   try { const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)); if(saved?.products?.length) return saved; } catch(error) { console.warn(error); }
-  const state=initialState(); saveState(state); return state;
+  return initialState();
 }
 async function syncStateWithSupabase(next){
   const client=window.supabaseClient;
@@ -103,3 +104,4 @@ function exportCsv(){const rows=[['Venda','Data','Produto','Tamanho','Quantidade
 function render(view=currentView){currentView=view;const labels={dashboard:'Visao geral',products:'Produtos',stock:'Estoque',sales:'Vendas',movements:'Movimentacoes',reports:'Relatorios',settings:'Configuracoes'};title.textContent=labels[view];navItems.forEach(item=>item.classList.toggle('active',item.dataset.view===view));({dashboard:renderDashboard,products:renderProducts,stock:renderStock,sales:renderSales,movements:renderMovements,reports:renderReports,settings:renderSettings}[view])()}
 document.addEventListener('click',event=>{const image=event.target.closest('[data-product-image]');if(!image)return;const modal=document.getElementById('modal');modal.innerHTML=`<div class="image-modal"><button class="modal-close" data-image-close aria-label="Fechar imagem">&times;</button><img src="${image.dataset.productImage}" alt="${image.alt}"></div>`;modal.hidden=false;modal.querySelector('[data-image-close]').onclick=()=>{modal.hidden=true;modal.innerHTML=''};modal.onclick=modalEvent=>{if(modalEvent.target===modal){modal.hidden=true;modal.innerHTML=''}}});
 navItems.forEach(item=>item.onclick=()=>{render(item.dataset.view);document.getElementById('sidebar').classList.remove('open')});document.getElementById('openSidebar').onclick=()=>document.getElementById('sidebar').classList.add('open');document.getElementById('closeSidebar').onclick=()=>document.getElementById('sidebar').classList.remove('open');window.addEventListener('flos-auth-ready',async()=>{await loadAuthoritativeState();render()});window.supabaseClient?.auth.getSession().then(async({data})=>{if(data.session){await loadAuthoritativeState();render()}});
+window.addEventListener('flos-catalog-imported',async()=>{await loadAuthoritativeState();render(currentView)});

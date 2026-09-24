@@ -40,7 +40,7 @@
       }));
       const { error: productError } = await client
         .from("products")
-        .upsert(products, { onConflict: "id", ignoreDuplicates: true });
+        .upsert(products, { onConflict: "id" });
       if (productError) throw productError;
 
       const sizes = catalog.flatMap(product => product.tamanhos.map(size => ({
@@ -54,6 +54,7 @@
       if (sizeError) throw sizeError;
 
       toast(`${catalog.length} produtos importados com sucesso.`);
+      window.dispatchEvent(new CustomEvent("flos-catalog-imported"));
     } catch (error) {
       console.error(error);
       toast(`Erro na importacao: ${error.message}`);

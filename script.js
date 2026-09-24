@@ -413,8 +413,24 @@ const produtos = [
   tamanhos: ["P","M","GG","G"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
-
-
+{
+    id: 46,
+    Preco: "R$ 0,00",
+    nome: "T-Shirt Rosa Arco-Iris",
+    descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/CamisetaRosaArcoIris.png",
+  tamanhos: ["44","46","M","P","GG"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
+{
+   id: 47,
+    Preco: "R$ 0,00",
+    nome: "T-Shirt Azul Arco-Iris",
+    descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/CamisetaAzulArcoIris.png",
+  tamanhos: ["44","46","M","P","G"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
 ];
 
 // Exposto apenas para integrações internas, sem alterar o catálogo público.
