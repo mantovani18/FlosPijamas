@@ -245,7 +245,7 @@ const produtos = [
   {
     id: 27,
     Preco: "R$ 0,00",
-    nome: "Pijama Preto com Vermelho Masculino",
+    nome: "Pijama de Flanela Preto com Vermelho Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoVermelhoMasc.png",
   tamanhos: ["P"],
@@ -254,7 +254,7 @@ const produtos = [
   {
     id: 28,
     Preco: "R$ 0,00",
-    nome: "Pijama Preto com Vermelho Feminino",
+    nome: "Pijama de Flanela Preto com Vermelho Feminino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoVermelhoFem.png",
   tamanhos: ["PP"],
@@ -299,7 +299,7 @@ const produtos = [
   {
     id: 33,
     Preco: "R$ 229,00",
-    nome: "Pijama verde com estampa de coração - Manga Curta + Shorts",
+    nome: "Pijama Camélia Verde coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeCoracaoCurto.png",
   tamanhos: ["GG", "P", "M"],
@@ -308,7 +308,7 @@ const produtos = [
   {
     id: 34,
     Preco: "R$ 229,00",
-    nome: "Pijama verde com estampa de coração - Manga Curta + Calça",
+    nome: "Pijama Tulipa Verde coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeCoração.png",
   tamanhos: ["GG", "P"],
@@ -317,7 +317,7 @@ const produtos = [
   {
     id: 35,
     Preco: "R$ 229,00",
-    nome: "Pijama Azul com estampa de coração - Manga Curta + Calça",
+    nome: "Pijama Tulipa Azul com coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulCoração.png",
   tamanhos: ["GG", "P"],
@@ -326,7 +326,7 @@ const produtos = [
   {
     id: 36,
     Preco: "R$ 229,00",
-    nome: "Pijama Azul com estampa de coração - Manga Curta + Shorts",
+    nome: "Pijama Camélia Azul com coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulCoracaoCurto.png",
   tamanhos: ["GG"],
@@ -344,7 +344,7 @@ const produtos = [
   {
     id: 38,
     Preco: "R$ 229,00",
-    nome: "Pijama Branco com estampa de coração - Manga Curta + Calça",
+    nome: "Pijama Tulipa Branco com coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoração.png",
   tamanhos: ["GG", "G"],
@@ -353,7 +353,7 @@ const produtos = [
   {
     id: 39,
     Preco: "R$ 229,00",
-    nome: "Pijama Branco com estampa de coração - Manga Curta + Shorts",
+    nome: "Pijama Camélia Branco com coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoracaoCurto.png",
   tamanhos: ["GG"],
