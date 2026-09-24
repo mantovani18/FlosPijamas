@@ -10,7 +10,7 @@
 const produtos = [
   {
     id: 1,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama rosa com Preto Listrado",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/RosaPretoListrado.png",
@@ -420,6 +420,53 @@ const produtos = [
 // Exposto apenas para integrações internas, sem alterar o catálogo público.
 window.FLOS_PRODUCTS = produtos;
 
+function formatarPreco(valor){
+  return Number(valor || 0).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+async function carregarCatalogoPublico(){
+  const config = window.FLOS_SUPABASE_CONFIG;
+  if (!config?.url || !config?.anonKey) return;
+
+  const params = new URLSearchParams({
+    select: "id,name,description,image,link,price,active,product_sizes(size)",
+    active: "eq.true",
+    order: "id.asc"
+  });
+
+  try {
+    const response = await fetch(`${config.url}/rest/v1/products?${params}`, {
+      headers: {
+        apikey: config.anonKey,
+        Authorization: `Bearer ${config.anonKey}`
+      }
+    });
+    if (!response.ok) throw new Error(`Catalogo indisponivel (${response.status})`);
+
+    const catalogo = await response.json();
+    if (!Array.isArray(catalogo) || !catalogo.length) return;
+
+    const produtosDoBanco = catalogo.map(produto => {
+      const produtoLocal = produtos.find(item => Number(item.id) === Number(produto.id));
+      const tamanhos = (produto.product_sizes || []).map(item => item.size);
+      return {
+        ...produtoLocal,
+        id: produto.id,
+        nome: produto.name,
+        descricao: produto.description || produtoLocal?.descricao || "",
+        imagem: produto.image || produtoLocal?.imagem || "",
+        link: produto.link || produtoLocal?.link || "",
+        Preco: formatarPreco(produto.price),
+        tamanhos: tamanhos.length ? tamanhos : (produtoLocal?.tamanhos || [])
+      };
+    });
+
+    produtos.splice(0, produtos.length, ...produtosDoBanco);
+  } catch (error) {
+    console.warn("Catalogo do Supabase indisponivel; usando catalogo local.", error);
+  }
+}
+
 /* Gera um placeholder elegante em SVG para o produto (usado até as
    fotos reais serem adicionadas em /images) */
 function criarPlaceholderSVG(nome, indice){
@@ -696,8 +743,9 @@ function marcarElementosParaReveal(){
 }
 
 /* Inicialização */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   if (!document.getElementById("produtosGrid")) return;
+  await carregarCatalogoPublico();
   renderizarProdutos();
   configurarFiltros();
   configurarEventosProdutos();

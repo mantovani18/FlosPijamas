@@ -41,6 +41,13 @@ alter table public.stock_movements enable row level security;
 
 do $$ declare table_name text; begin foreach table_name in array array['categories','products','product_sizes','sales','sale_items','stock_movements'] loop execute format('drop policy if exists "authenticated full access" on public.%I', table_name); execute format('create policy "authenticated full access" on public.%I for all to authenticated using (true) with check (true)', table_name); end loop; end $$;
 
+drop policy if exists "public catalog read" on public.products;
+create policy "public catalog read" on public.products for select to anon using (active = true);
+drop policy if exists "public product sizes read" on public.product_sizes;
+create policy "public product sizes read" on public.product_sizes for select to anon using (
+  exists (select 1 from public.products where products.id = product_sizes.product_id and products.active = true)
+);
+
 -- Operacoes de venda/cancelamento devem ser transacoes no backend ou em funcoes RPC:
 -- validar estoque >= quantidade, inserir sale/sale_items, atualizar product_sizes e inserir movement.
 
