@@ -52,7 +52,23 @@ async function loadAuthoritativeState(){
       client.from('stock_movements').select('id,product_id,size,movement_type,quantity,note,created_at').order('created_at',{ascending:false})
     ]);
     if(productsError)throw productsError;if(salesError)throw salesError;if(movementsError)throw movementsError;
-    state.products=products.map(item=>({id:item.id,nome:item.name,descricao:item.description||'',imagem:item.image||'',link:item.link||'',category:item.name.toLowerCase().includes('camiseta')?'Camisetas':'Pijamas',active:item.active,cost:Number(item.cost||0),price:Number(item.price||0),tamanhos:item.product_sizes.map(size=>size.size),sizes:Object.fromEntries(item.product_sizes.map(size=>[size.size,size.stock]))}));
+    state.products=products.map(item=>{
+      const localProduct=catalog.find(product=>Number(product.id)===Number(item.id));
+      const localPrice=catalogPrice(localProduct);
+      return {
+        id:item.id,
+        nome:localProduct?.nome||item.name,
+        descricao:localProduct?.descricao||item.description||'',
+        imagem:localProduct?.imagem||item.image||'',
+        link:localProduct?.link||item.link||'',
+        category:(localProduct?.nome||item.name).toLowerCase().includes('camiseta')?'Camisetas':'Pijamas',
+        active:item.active,
+        cost:Number(item.cost||0),
+        price:localPrice||Number(item.price||0),
+        tamanhos:item.product_sizes.map(size=>size.size),
+        sizes:Object.fromEntries(item.product_sizes.map(size=>[size.size,size.stock]))
+      };
+    });
     state.sales=sales.map(sale=>({id:sale.id,number:`#${sale.number}`,date:sale.sold_at,payment:sale.payment_method,discount:Number(sale.discount||0),total:Number(sale.total||0),status:sale.status,note:sale.note,items:sale.sale_items.map(item=>({id:item.id,productId:item.product_id,name:productById(item.product_id)?.nome||'Produto',size:item.size,quantity:item.quantity,unitPrice:Number(item.unit_price),cost:Number(item.unit_cost)}))}));
     state.movements=movements.map(item=>({id:item.id,date:item.created_at,productId:item.product_id,size:item.size,type:item.movement_type,quantity:item.quantity,note:item.note,user:'Admin'}));
     localStorage.setItem(STORAGE_KEY,JSON.stringify(state));

@@ -36,6 +36,7 @@
         description: product.descricao,
         image: product.imagem,
         link: product.link,
+        price: Number(String(product.Preco || "0").replace(/[^0-9,.-]/g, "").replace(".", "").replace(",", ".")) || 0,
         category_id: categoryIds[product.nome.toLowerCase().includes("camiseta") ? "Camisetas" : "Pijamas"]
       }));
       const { error: productError } = await client

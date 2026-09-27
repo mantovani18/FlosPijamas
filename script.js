@@ -28,7 +28,7 @@ const produtos = [
   },
   {
     id: 3,
-    Preco: "R$ 229,00",
+    Preco: "R$ 0,00",
     nome: "Pijama Verde Quadriculado",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeQuadriculado.png",
@@ -55,7 +55,7 @@ const produtos = [
   },
   {
     id: 6,
-    Preco: "R$ 219,00",
+    Preco: "R$ 0,00",
     nome: "Pijama Azul com Vermelho Bolinhas - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulVermelho.png",
@@ -64,10 +64,10 @@ const produtos = [
   },
   {
     id: 7,
-    Preco: "R$ 249,00",
+    Preco: "R$ 0,00",
      nome: "Pijama Azul com Vermelho Bolinhas - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/AzulVermelho.png",
+    imagem: "pijamas/AzulComLaranja.png",
     tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20classic"
   },
@@ -76,7 +76,7 @@ const produtos = [
     Preco: "R$ 239,00",
     nome: "Pijama Verde com Bolinhas - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/VerdeBolinhas.png",
+    imagem: "pijamas/VerdeComBolinha.png",
     tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -109,7 +109,7 @@ const produtos = [
   },
   {
     id: 12,
-    Preco: "R$ ",
+    Preco: "R$ 0,00",
     nome: "Pijama Pink com Azul - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
@@ -118,8 +118,8 @@ const produtos = [
   },
    {
     id: 13,
-    Preco: "R$ 219,00",
-    nome: "Pijama Pink com Azul - Manga Longa + Shorts",
+    Preco: "R$ 0,00",
+    nome: "Pijama Pink com Azul - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
     tamanhos: ["GG"],
@@ -200,7 +200,7 @@ const produtos = [
    {
     id: 22,
     Preco: "R$ 0,00",
-    nome: "Pijama Branco com Bolso Azul - Masculino",
+    nome: "Pijama Branco com Bolso Creme - Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoBolso.png",
   tamanhos: ["GG","M","P"],
@@ -209,9 +209,9 @@ const produtos = [
   {
     id: 23,
     Preco: "R$ 0,00",
-    nome: "Pijama Branco com Rosa Estampa de Olhos",
+    nome: "Pijama Branco com Rosa Estampa de Olho Grego",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/BrancoRosaOlho.png",
+    imagem: "pijamas/OlhoGrego.png",
   tamanhos: ["G"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -245,7 +245,7 @@ const produtos = [
   {
     id: 27,
     Preco: "R$ 0,00",
-    nome: "Pijama Preto com Vermelho Masculino",
+    nome: "Pijama de Flanela Preto com Vermelho Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoVermelhoMasc.png",
   tamanhos: ["P"],
@@ -254,7 +254,7 @@ const produtos = [
   {
     id: 28,
     Preco: "R$ 0,00",
-    nome: "Pijama Preto com Vermelho Feminino",
+    nome: "Pijama de Flanela Preto com Vermelho Feminino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoVermelhoFem.png",
   tamanhos: ["PP"],
@@ -283,7 +283,7 @@ const produtos = [
     Preco: "R$ 0,00",
     nome: "Pijama Rosa Tie-Dye - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/RosaTie-dye.png",
+    imagem: "pijamas/Tie-DyeCurta.png",
   tamanhos: ["PP", "P"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
@@ -298,17 +298,17 @@ const produtos = [
   },
   {
     id: 33,
-    Preco: "R$ 0,00",
-    nome: "Pijama verde com estampa de coração - Manga Curta + Shorts",
+    Preco: "R$ 229,00",
+    nome: "Pijama Camélia Verde coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/VerdeCoração.png",
+    imagem: "pijamas/VerdeCoracaoCurto.png",
   tamanhos: ["GG", "P", "M"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 34,
-    Preco: "R$ 0,00",
-    nome: "Pijama verde com estampa de coração - Manga Curta + Calça",
+    Preco: "R$ 229,00",
+    nome: "Pijama Tulipa Verde coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeCoração.png",
   tamanhos: ["GG", "P"],
@@ -316,8 +316,8 @@ const produtos = [
   },
   {
     id: 35,
-    Preco: "R$ 0,00",
-    nome: "Pijama Azul com estampa de coração - Manga Curta + Calça",
+    Preco: "R$ 229,00",
+    nome: "Pijama Tulipa Azul com coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulCoração.png",
   tamanhos: ["GG", "P"],
@@ -325,16 +325,16 @@ const produtos = [
   },
   {
     id: 36,
-    Preco: "R$ 0,00",
-    nome: "Pijama Azul com estampa de coração - Manga Curta + Shorts",
+    Preco: "R$ 229,00",
+    nome: "Pijama Camélia Azul com coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/AzulCoração.png",
+    imagem: "pijamas/AzulCoracaoCurto.png",
   tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 37,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama Azul Claro com estampa de bolinha",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulClaroBolinhas.png",
@@ -343,8 +343,8 @@ const produtos = [
   },
   {
     id: 38,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com estampa de coração - Manga Curta + Calça",
+    Preco: "R$ 229,00",
+    nome: "Pijama Tulipa Branco com coração - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoração.png",
   tamanhos: ["GG", "G"],
@@ -352,16 +352,16 @@ const produtos = [
   },
   {
     id: 39,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com estampa de coração - Manga Curta + Shorts",
+    Preco: "R$ 229,00",
+    nome: "Pijama Camélia Branco com coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/BrancoCoração.png",
+    imagem: "pijamas/BrancoCoracaoCurto.png",
   tamanhos: ["GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 40,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,90",
     nome: "Pijama Branco com estampa de coração Vermelho",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoraçãoVermelho.png",
@@ -388,7 +388,7 @@ const produtos = [
   },
   {
     id: 43,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "Camiseta Branca",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaBranca.png",
@@ -397,7 +397,7 @@ const produtos = [
   },
   {
     id: 44,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "Camiseta Azul",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaAzul.png",
@@ -406,7 +406,7 @@ const produtos = [
   },
   {
     id: 45,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "Camiseta Rosa",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaRosa.png",
@@ -415,23 +415,34 @@ const produtos = [
   },
 {
     id: 46,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "T-Shirt Rosa Arco-Iris",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
-    imagem: "pijamas/CamisetaRosaArcoIris.png",
+    imagem: "pijamas/CamisetaRosaArcoiris.png",
   tamanhos: ["44","46","M","P","GG"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
 {
    id: 47,
-    Preco: "R$ 0,00",
+    Preco: "R$ 69,90",
     nome: "T-Shirt Azul Arco-Iris",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaAzulArcoIris.png",
   tamanhos: ["44","46","M","P","G"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
+  {
+   id: 48,
+    Preco: "R$ 99,90",
+    nome: "Pijama Verde Listrado",
+    descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
+    imagem: "pijamas/VerdeListrado.png",
+  tamanhos: ["10","PP"],
+    link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
+  },
 ];
+
+const pedidoWhatsApp = [];
 
 // Exposto apenas para integrações internas, sem alterar o catálogo público.
 window.FLOS_PRODUCTS = produtos;
@@ -462,22 +473,26 @@ async function carregarCatalogoPublico(){
     const catalogo = await response.json();
     if (!Array.isArray(catalogo) || !catalogo.length) return;
 
+    const idsNoBanco = new Set(catalogo.map(produto => Number(produto.id)));
     const produtosDoBanco = catalogo.map(produto => {
       const produtoLocal = produtos.find(item => Number(item.id) === Number(produto.id));
       const tamanhos = (produto.product_sizes || []).map(item => item.size);
       return {
         ...produtoLocal,
         id: produto.id,
-        nome: produto.name,
+        nome: produtoLocal?.nome || produto.name || "",
         descricao: produto.description || produtoLocal?.descricao || "",
-        imagem: produto.image || produtoLocal?.imagem || "",
+        imagem: produtoLocal?.imagem || produto.image || "",
         link: produto.link || produtoLocal?.link || "",
-        Preco: formatarPreco(produto.price),
+        Preco: produtoLocal?.Preco && produtoLocal.Preco !== "R$ 0,00"
+          ? produtoLocal.Preco
+          : formatarPreco(produto.price),
         tamanhos: tamanhos.length ? tamanhos : (produtoLocal?.tamanhos || [])
       };
     });
 
-    produtos.splice(0, produtos.length, ...produtosDoBanco);
+    const produtosLocaisPendentes = produtos.filter(produto => !idsNoBanco.has(Number(produto.id)));
+    produtos.splice(0, produtos.length, ...produtosDoBanco, ...produtosLocaisPendentes);
   } catch (error) {
     console.warn("Catalogo do Supabase indisponivel; usando catalogo local.", error);
   }
@@ -526,7 +541,7 @@ function criarCardProduto(produto, indice){
       <p class="produto-descricao">${produto.descricao}</p>
       <p class="tamanhos-label">Tamanhos disponíveis</p>
       <div class="tamanhos-lista">${tamanhosDisponiveis}</div>
-      <button type="button" class="btn-comprar">Comprar pelo WhatsApp</button>
+      <button type="button" class="btn-comprar">Adicionar ao pedido</button>
     </div>
   `;
 
@@ -630,9 +645,65 @@ function renderizarProdutos(){
   });
 }
 
-/* Abre o WhatsApp com os dados do produto escolhido */
+function configurarPedidoWhatsApp(){
+  const pedidoFlutuante = document.getElementById("pedidoFlutuante");
+  const botaoPedido = document.getElementById("enviarPedidoWhatsapp");
+  const botaoToggle = document.getElementById("pedidoToggle");
+  const painelPedido = document.getElementById("pedidoPainel");
+  const listaPedido = document.getElementById("pedidoItens");
+  const contadorPedido = document.getElementById("pedidoContador");
+  if (!pedidoFlutuante || !botaoPedido || !botaoToggle || !painelPedido || !listaPedido) return;
+
+  function alternarPainelPedido(aberto){
+    painelPedido.hidden = !aberto;
+    botaoToggle.setAttribute("aria-expanded", String(aberto));
+    botaoToggle.setAttribute("aria-label", aberto ? "Fechar sacola de compras" : "Abrir sacola de compras");
+    botaoToggle.title = aberto ? "Fechar sacola de compras" : "Abrir sacola de compras";
+  }
+
+  function atualizarBotaoPedido(){
+    pedidoFlutuante.hidden = !pedidoWhatsApp.length;
+    contadorPedido.textContent = pedidoWhatsApp.length
+      ? `${pedidoWhatsApp.length} ${pedidoWhatsApp.length === 1 ? "item" : "itens"}`
+      : "";
+    if (!pedidoWhatsApp.length) alternarPainelPedido(false);
+    listaPedido.innerHTML = pedidoWhatsApp.map((item, indice) => `
+      <div class="pedido-item">
+        <span>${item.nome} · ${item.tamanho}</span>
+        <button type="button" class="pedido-remover" data-pedido-indice="${indice}" aria-label="Remover ${item.nome}">Remover</button>
+      </div>
+    `).join("");
+  }
+
+  botaoToggle.addEventListener("click", () => {
+    alternarPainelPedido(painelPedido.hidden);
+  });
+
+  listaPedido.addEventListener("click", evento => {
+    const botaoRemover = evento.target.closest(".pedido-remover");
+    if (!botaoRemover) return;
+    pedidoWhatsApp.splice(Number(botaoRemover.dataset.pedidoIndice), 1);
+    atualizarBotaoPedido();
+  });
+
+  botaoPedido.addEventListener("click", () => {
+    const itens = pedidoWhatsApp.map(item =>
+      `- ${item.nome} | Tamanho: ${item.tamanho} | ${item.preco}`
+    ).join("\n");
+    const mensagem = `Olá! Quero fazer este pedido:\n\n${itens}`;
+    const whatsappUrl = `https://wa.me/5543991257579?text=${encodeURIComponent(mensagem)}`;
+    window.open(whatsappUrl, "_blank", "noopener");
+    pedidoWhatsApp.length = 0;
+    atualizarBotaoPedido();
+  });
+
+  return atualizarBotaoPedido;
+}
+
+/* Adiciona a peça escolhida ao pedido ou envia todas pelo WhatsApp */
 function configurarEventosProdutos(){
   const grid = document.getElementById("produtosGrid");
+  const atualizarBotaoPedido = configurarPedidoWhatsApp();
 
   grid.addEventListener("click", (evento) => {
     const card = evento.target.closest(".produto-card");
@@ -642,8 +713,9 @@ function configurarEventosProdutos(){
 
     const tamanhoSelecionado = evento.target.closest(".tamanho-item");
     if (tamanhoSelecionado){
+      const jaSelecionado = tamanhoSelecionado.classList.contains("selecionado");
       card.querySelectorAll(".tamanho-item").forEach(item => {
-        const selecionado = item === tamanhoSelecionado;
+        const selecionado = item === tamanhoSelecionado && !jaSelecionado;
         item.classList.toggle("selecionado", selecionado);
         item.setAttribute("aria-pressed", String(selecionado));
       });
@@ -660,9 +732,20 @@ function configurarEventosProdutos(){
         return;
       }
 
-      const mensagem = `Olá! Tenho interesse nesta peça:\n\nPeça: ${produto.nome}\nValor: ${produto.Preco || "R$ 0,00"}\nTamanho: ${tamanho}`;
-      const whatsappUrl = `https://wa.me/5543996212570?text=${encodeURIComponent(mensagem)}`;
-      window.open(whatsappUrl, "_blank", "noopener");
+      const itemExistente = pedidoWhatsApp.find(item => item.id === produto.id && item.tamanho === tamanho);
+      if (itemExistente){
+        mostrarToast("Essa peça já está no pedido.");
+        return;
+      }
+
+      pedidoWhatsApp.push({
+        id: produto.id,
+        nome: produto.nome,
+        preco: produto.Preco || "R$ 0,00",
+        tamanho
+      });
+      atualizarBotaoPedido?.();
+      mostrarToast("Peça adicionada ao pedido.");
     }
   });
 }
