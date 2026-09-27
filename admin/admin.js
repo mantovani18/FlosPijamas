@@ -5,12 +5,36 @@ const today = () => new Date().toISOString().slice(0,10);
 const uid = prefix => `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2,7)}`;
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
 const catalogPrice = product => Number(String(product.Preco || '0').replace(/[^0-9,.-]/g,'').replace('.','').replace(',','.')) || 0;
+const catalogImagePath = path => String(path || '').split('/').map(encodeURIComponent).join('/');
+
+function mergeCatalogMetadata(products){
+  const catalogById = new Map(catalog.map(product => [String(product.id), product]));
+  return products.map(product => {
+    const catalogProduct = catalogById.get(String(product.id));
+    if (!catalogProduct) return product;
+    const tamanhos = catalogProduct.tamanhos || product.tamanhos || [];
+    return {
+      ...product,
+      nome: catalogProduct.nome,
+      descricao: catalogProduct.descricao,
+      imagem: catalogProduct.imagem,
+      link: catalogProduct.link,
+      category: catalogProduct.nome.toLowerCase().includes('camiseta') ? 'Camisetas' : 'Pijamas',
+      price: catalogPrice(catalogProduct),
+      tamanhos,
+      sizes: Object.fromEntries(tamanhos.map(size => [size, Number(product.sizes?.[size] || 0)]))
+    };
+  });
+}
 
 function initialState(){
   return {settings:{lowStock:2}, products:catalog.map(product => ({...product, category:product.nome.toLowerCase().includes('camiseta')?'Camisetas':'Pijamas', active:true, cost:0, price:catalogPrice(product), sizes:Object.fromEntries(product.tamanhos.map(size=>[size,0]))})), sales:[], movements:[]};
 }
 function loadState(){
-  try { const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)); if(saved?.products?.length) return saved; } catch(error) { console.warn(error); }
+  try {
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if(saved?.products?.length) return {...saved, products:mergeCatalogMetadata(saved.products)};
+  } catch(error) { console.warn(error); }
   return initialState();
 }
 async function syncStateWithSupabase(next){
@@ -55,6 +79,9 @@ async function loadAuthoritativeState(){
     state.products=products.map(item=>{
       const localProduct=catalog.find(product=>Number(product.id)===Number(item.id));
       const localPrice=catalogPrice(localProduct);
+      const databaseSizes=item.product_sizes.map(size=>size.size);
+      const tamanhos=localProduct?.tamanhos || databaseSizes;
+      const stockBySize=Object.fromEntries(item.product_sizes.map(size=>[size.size,size.stock]));
       return {
         id:item.id,
         nome:localProduct?.nome||item.name,
@@ -64,9 +91,9 @@ async function loadAuthoritativeState(){
         category:(localProduct?.nome||item.name).toLowerCase().includes('camiseta')?'Camisetas':'Pijamas',
         active:item.active,
         cost:Number(item.cost||0),
-        price:localPrice||Number(item.price||0),
-        tamanhos:item.product_sizes.map(size=>size.size),
-        sizes:Object.fromEntries(item.product_sizes.map(size=>[size.size,size.stock]))
+        price:localProduct ? localPrice : Number(item.price||0),
+        tamanhos,
+        sizes:Object.fromEntries(tamanhos.map(size=>[size,Number(stockBySize[size]||0)]))
       };
     });
     state.sales=sales.map(sale=>({id:sale.id,number:`#${sale.number}`,date:sale.sold_at,payment:sale.payment_method,discount:Number(sale.discount||0),total:Number(sale.total||0),status:sale.status,note:sale.note,items:sale.sale_items.map(item=>({id:item.id,productId:item.product_id,name:productById(item.product_id)?.nome||'Produto',size:item.size,quantity:item.quantity,unitPrice:Number(item.unit_price),cost:Number(item.unit_cost)}))}));
@@ -87,7 +114,7 @@ function stockLabel(value){return value===0?'Sem estoque':value<=state.settings.
 function activeSales(){return state.sales.filter(sale=>sale.status!=='CANCELADA')}
 function revenue(sales=activeSales()){return sales.reduce((sum,sale)=>sum+Number(sale.total||0),0)}
 function notify(message){const toast=document.getElementById('toast');toast.textContent=message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2800)}
-function productImage(product){return `<img class="admin-product-image" src="../${esc(product.imagem)}" alt="${esc(product.nome)}" data-product-image="../${esc(product.imagem)}" onerror="this.style.visibility='hidden'">`}
+function productImage(product){const imagePath=`../${catalogImagePath(product.imagem)}`;return `<img class="admin-product-image" src="${esc(imagePath)}" alt="${esc(product.nome)}" data-product-image="${esc(imagePath)}" onerror="this.style.visibility='hidden'">`}
 function productCell(product){return `<div class="product-cell">${productImage(product)}<strong>${esc(product.nome)}</strong></div>`}
 function periodSales(days){const start=new Date();start.setHours(0,0,0,0);start.setDate(start.getDate()-days+1);return activeSales().filter(sale=>new Date(sale.date)>=start)}
 

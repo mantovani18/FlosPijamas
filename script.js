@@ -11,7 +11,7 @@ const produtos = [
   {
     id: 1,
     Preco: "R$ 99,90",
-    nome: "Pijama rosa com Preto Listrado",
+    nome: "Pijama Cardigan Manga Curta com Shorts Rosa",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/RosaPretoListrado.png",
     tamanhos: ["PP", "P", "10"],
@@ -20,7 +20,7 @@ const produtos = [
   {
     id: 2,
     Preco: "R$ 99,00",
-    nome: "Pijama Listrado Colorido",
+    nome: "Pijama Cardigan Manga Curta com Shorts Colorido",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/ColoridoListrado.png",
     tamanhos: ["PP", "M", "10"],
@@ -28,8 +28,8 @@ const produtos = [
   },
   {
     id: 3,
-    Preco: "R$ 0,00",
-    nome: "Pijama Verde Quadriculado",
+    Preco: "R$ 229,00",
+    nome: "Pijama Cardigan Curta e Calça Xadrez Verde",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeQuadriculado.png",
     tamanhos: ["PP","GG"],
@@ -38,7 +38,7 @@ const produtos = [
   {
     id: 4,
     Preco: "R$ 239,00",
-    nome: "Pijama Lilas Liso Manga Curta + Shorts",
+    nome: "Pijama Camélia Cinza - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/LilasLiso.png",
     tamanhos: ["GG"],
@@ -47,7 +47,7 @@ const produtos = [
   {
     id: 5,
     Preco: "R$ 269,00",
-    nome: "Pijama Lilas Liso - Manga Longa + Calça",
+    nome: "Pijama Lilium Cinza - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/LilasLiso.png",
     tamanhos: ["GG"],
@@ -55,8 +55,8 @@ const produtos = [
   },
   {
     id: 6,
-    Preco: "R$ 0,00",
-    nome: "Pijama Azul com Vermelho Bolinhas - Manga Curta + Shorts",
+    Preco: "R$ 219,00",
+    nome: "Pijama Camélia azul de mini Poá - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulVermelho.png",
     tamanhos: ["GG"],
@@ -64,8 +64,8 @@ const produtos = [
   },
   {
     id: 7,
-    Preco: "R$ 0,00",
-     nome: "Pijama Azul com Vermelho Bolinhas - Manga Longa + Calça",
+    Preco: "R$ 249,00",
+     nome: "Pijama Lilium Azul de mini Poá - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulComLaranja.png",
     tamanhos: ["GG"],
@@ -74,7 +74,7 @@ const produtos = [
   {
     id: 8,
     Preco: "R$ 239,00",
-    nome: "Pijama Verde com Bolinhas - Manga Longa + Calça",
+    nome: "Pijama Lilium Verde de Poá - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeComBolinha.png",
     tamanhos: ["GG"],
@@ -83,7 +83,7 @@ const produtos = [
   {
     id: 9,
     Preco: "R$ 249,00",
-    nome: "Pijama Preto  com Bolinhas - Manga Longa + Calça",
+    nome: "Pijama Lilium Preto de Poá - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoBolinhas.png",
     tamanhos: ["GG"],
@@ -92,7 +92,7 @@ const produtos = [
   {
     id: 10,
     Preco: "R$ 219,00",
-    nome: "Pijama Preto  com Bolinhas - Manga Curta + Shorts",
+    nome: "Pijama Camélia Preto de Poá - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoBolinhas.png",
     tamanhos: ["GG"],
@@ -101,7 +101,7 @@ const produtos = [
   {
     id: 11,
     Preco: "R$ 199,00",
-    nome: "Pijama Azul com Bolinhas",
+    nome: "Pijama Camélia Azul Marinho de Poá - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulBolinhas.png",
     tamanhos: ["GG"],
@@ -109,8 +109,8 @@ const produtos = [
   },
   {
     id: 12,
-    Preco: "R$ 0,00",
-    nome: "Pijama Pink com Azul - Manga Longa + Calça",
+    Preco: "R$ 249,00",
+    nome: "Pijama Lilium Pink de miniPoá - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
     tamanhos: ["GG"],
@@ -118,8 +118,8 @@ const produtos = [
   },
    {
     id: 13,
-    Preco: "R$ 0,00",
-    nome: "Pijama Pink com Azul - Manga Curta + Shorts",
+    Preco: "R$ 219,00",
+    nome: "Pijama Camélia Pink de mini Poá - Manga Longa + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
     tamanhos: ["GG"],
@@ -127,8 +127,8 @@ const produtos = [
   },
   {
     id: 14,
-    Preco: "R$ 0,00",
-    nome: "Pijama Vinho - Manga Curta + Shorts",
+    Preco: "R$ 239,00",
+    nome: "Pijama Camélia Marsala - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/Vinho.png",
     tamanhos: ["G","GG"],
@@ -136,8 +136,8 @@ const produtos = [
   },
   {
     id: 15,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com Estampa de Boca",
+    Preco: "R$ 99,00",
+    nome: "Pijama Cardigan Bocas - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoBoca.png",
     tamanhos: ["PP"],
@@ -145,8 +145,8 @@ const produtos = [
   },
     {
     id: 16,
-      Preco: "R$ 0,00",
-    nome: "Pijama Branco com Estampa de Onça",
+      Preco: "R$ 199,00",
+    nome: "Pijama Camélia Estampa de Onça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoOnça.png",
   tamanhos: ["M", "GG"],
@@ -154,17 +154,17 @@ const produtos = [
   },
    {
     id: 17,
-    Preco: "R$ 0,00",
-    nome: "Camisola Branca Quadriculada",
+    Preco: "R$ 139,00",
+    nome: "Chemise Manga Longa Xadrez Cinza ",
     descricao: "Camisola confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisolaBrancoQuadriculado.png",
-  tamanhos: ["PP"],
+  tamanhos: ["P"],
     link: "https://www.mercadolivre.com.br/ofertas/?search=pijama%20premium"
   },
   {
     id: 18,
-    Preco: "R$ 0,00",
-    nome: "Camisola Azul Quadriculada",
+    Preco: "R$ 139,00",
+    nome: "Chemise Manga Longa Xadrez Azul",
     descricao: "Camisola confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisolaAzulQuadriculado.png",
   tamanhos: ["P", "M"],
@@ -172,8 +172,8 @@ const produtos = [
   },
   {
     id: 19,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco Florido",
+    Preco: "R$ 219,00",
+    nome: "Pijama Camélia Pintura Orgânica",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancaFlores.png",
   tamanhos: ["GG"],
@@ -181,8 +181,8 @@ const produtos = [
   },
   {
     id: 20,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com Azul - Masculino",
+    Preco: "R$ 159,00",
+    nome: "Pijama Gerânio Azul Vichy - Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoAzulBolso.png",
   tamanhos: ["GG","P"],
@@ -190,8 +190,8 @@ const produtos = [
   },
   {
     id: 21,
-    Preco: "R$ 0,00",
-    nome: "Pijama Azul Feminino",
+    Preco: "R$ 209,00",
+    nome: "Pijama Camélia Vichy - Feminino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulFem.png",
   tamanhos: ["GG","G","M","PP"],
@@ -199,8 +199,8 @@ const produtos = [
   },
    {
     id: 22,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com Bolso Creme - Masculino",
+    Preco: "R$ 159,00",
+    nome: "Pijama Gerânio Listrado Creme - Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoBolso.png",
   tamanhos: ["GG","M","P"],
@@ -208,8 +208,8 @@ const produtos = [
   },
   {
     id: 23,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com Rosa Estampa de Olho Grego",
+    Preco: "R$ 99,00",
+    nome: "Pijama Divertido Olho Grego",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/OlhoGrego.png",
   tamanhos: ["G"],
@@ -217,8 +217,8 @@ const produtos = [
   },
    {
     id: 24,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco Liso",
+    Preco: "R$ 239,00",
+    nome: "Pijama Camélia Branco com Lilas",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoLiso.png",
   tamanhos: ["PP","M","GG","P"],
@@ -226,8 +226,8 @@ const produtos = [
   },
   {
     id: 25,
-    Preco: "R$ 0,00",
-    nome: "Pijama Rosa Quadriculado",
+    Preco: "R$ 259,00",
+    nome: "Pijama Cardigan Manga curta e Calça Rosa",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/RosaQuadriculado.png",
   tamanhos: ["M"],
@@ -235,8 +235,8 @@ const produtos = [
   },
   {
     id: 26,
-    Preco: "R$ 0,00",
-    nome: "Pijama Azul Ondulado",
+    Preco: "R$ 99,00",
+    nome: "Pijama Cardigan Manga curta com shorts Azul",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulOndulado.png",
   tamanhos: ["PP","10"],
@@ -244,7 +244,7 @@ const produtos = [
   },
   {
     id: 27,
-    Preco: "R$ 0,00",
+    Preco: "R$ 239,00",
     nome: "Pijama de Flanela Preto com Vermelho Masculino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoVermelhoMasc.png",
@@ -253,7 +253,7 @@ const produtos = [
   },
   {
     id: 28,
-    Preco: "R$ 0,00",
+    Preco: "R$ 239,00",
     nome: "Pijama de Flanela Preto com Vermelho Feminino",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoVermelhoFem.png",
@@ -262,8 +262,8 @@ const produtos = [
   },
    {
     id: 29,
-    Preco: "R$ 0,00",
-    nome: "Pijama Branco com Preto estampa de Bolinhas",
+    Preco: "R$ 249,00",
+    nome: "Pijama Lilium Branco de Poá",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoPretoBolinha.png",
   tamanhos: ["GG", "M"],
@@ -271,8 +271,8 @@ const produtos = [
   },
   {
     id: 30,
-    Preco: "R$ 0,00",
-    nome: "Pijama Rosa Liso",
+    Preco: "R$ 239,00",
+    nome: "Pijama Camélia Rosa",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/RosaLiso.png",
   tamanhos: ["GG", "P"],
@@ -280,8 +280,8 @@ const produtos = [
   },
   {
     id: 31,
-    Preco: "R$ 0,00",
-    nome: "Pijama Rosa Tie-Dye - Manga Curta + Shorts",
+    Preco: "R$ 99,00",
+    nome: "Pijama Cardigan Tie Dye - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/Tie-DyeCurta.png",
   tamanhos: ["PP", "P"],
@@ -289,8 +289,8 @@ const produtos = [
   },
   {
     id: 32,
-    Preco: "R$ 0,00",
-    nome: "Pijama Rosa Tie-Dye - Manga Curta + Calça",
+    Preco: "R$ 99,00",
+    nome: "Pijama Cardigan Tie-Dye - Manga Curta + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/RosaTie-dye.png",
   tamanhos: ["PP", "P"],
@@ -298,7 +298,7 @@ const produtos = [
   },
   {
     id: 33,
-    Preco: "R$ 229,00",
+    Preco: "R$ 199,00",
     nome: "Pijama Camélia Verde coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeCoracaoCurto.png",
@@ -325,7 +325,7 @@ const produtos = [
   },
   {
     id: 36,
-    Preco: "R$ 229,00",
+    Preco: "R$ 199,00",
     nome: "Pijama Camélia Azul com coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulCoracaoCurto.png",
@@ -352,7 +352,7 @@ const produtos = [
   },
   {
     id: 39,
-    Preco: "R$ 229,00",
+    Preco: "R$ 199,00",
     nome: "Pijama Camélia Branco com coração - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoracaoCurto.png",
@@ -362,7 +362,7 @@ const produtos = [
   {
     id: 40,
     Preco: "R$ 99,90",
-    nome: "Pijama Branco com estampa de coração Vermelho",
+    nome: "Pijama Cardigan Manga Longa com Shorts Coração Vermelho",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/BrancoCoraçãoVermelho.png",
   tamanhos: ["PP", "G", "M", "P"],
@@ -370,8 +370,8 @@ const produtos = [
   },
   {
     id: 41,
-    Preco: "R$ 0,00",
-    nome: "Pijama Marrom com estampa de onça - Manga Curta + Shorts",
+    Preco: "R$ 99,00",
+    nome: "Pijama Cardigan Animal Print Onça - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/MarromOnça.png",
   tamanhos: ["PP","P"],
@@ -379,8 +379,8 @@ const produtos = [
   },
   {
     id: 42,
-    Preco: "R$ 0,00",
-    nome: "Pijama Marrom com estampa de onça - Manga Longa + Shorts",
+    Preco: "R$ 99,00",
+    nome: "Pijama Cardigan Animal Print Onça - Manga Longa + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/MarromOnça.png",
   tamanhos: ["PP","10"],
@@ -389,7 +389,7 @@ const produtos = [
   {
     id: 43,
     Preco: "R$ 69,90",
-    nome: "Camiseta Branca",
+    nome: "T-shirt Minimalista Branca",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaBranca.png",
   tamanhos: ["P","M","GG"],
@@ -398,7 +398,7 @@ const produtos = [
   {
     id: 44,
     Preco: "R$ 69,90",
-    nome: "Camiseta Azul",
+    nome: "T-shirt Minimalista Verde Aguá",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaAzul.png",
   tamanhos: ["P","M","GG","G"],
@@ -407,7 +407,7 @@ const produtos = [
   {
     id: 45,
     Preco: "R$ 69,90",
-    nome: "Camiseta Rosa",
+    nome: "T-shirt Minimalista Rosa",
     descricao: "Camiseta confortável e elegante, produzida com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/CamisetaRosa.png",
   tamanhos: ["P","M","GG","G"],
@@ -434,7 +434,7 @@ const produtos = [
   {
    id: 48,
     Preco: "R$ 99,90",
-    nome: "Pijama Verde Listrado",
+    nome: "Pijama Cardigan Manga Curta com Shorts Verde",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeListrado.png",
   tamanhos: ["10","PP"],
@@ -487,7 +487,7 @@ async function carregarCatalogoPublico(){
         Preco: produtoLocal?.Preco && produtoLocal.Preco !== "R$ 0,00"
           ? produtoLocal.Preco
           : formatarPreco(produto.price),
-        tamanhos: tamanhos.length ? tamanhos : (produtoLocal?.tamanhos || [])
+        tamanhos: produtoLocal?.tamanhos || tamanhos
       };
     });
 
@@ -513,6 +513,10 @@ function criarPlaceholderSVG(nome, indice){
   `;
 }
 
+function codificarCaminhoImagem(caminho){
+  return caminho.split("/").map(segmento => encodeURIComponent(segmento)).join("/");
+}
+
 /* Cria o HTML de um card de produto */
 function criarCardProduto(produto, indice){
   const card = document.createElement("article");
@@ -529,7 +533,7 @@ function criarCardProduto(produto, indice){
   card.innerHTML = `
     <div class="produto-imagem">
       <img
-        src="${produto.imagem}"
+        src="${codificarCaminhoImagem(produto.imagem)}"
         alt="${produto.nome}"
         loading="lazy"
         onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,${svgFallback}';"
