@@ -19,7 +19,7 @@ const produtos = [
   },
   {
     id: 2,
-    Preco: "R$ 0,00",
+    Preco: "R$ 99,00",
     nome: "Pijama Listrado Colorido",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/ColoridoListrado.png",
@@ -28,7 +28,7 @@ const produtos = [
   },
   {
     id: 3,
-    Preco: "R$ 0,00",
+    Preco: "R$ 229,00",
     nome: "Pijama Verde Quadriculado",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeQuadriculado.png",
@@ -37,7 +37,7 @@ const produtos = [
   },
   {
     id: 4,
-    Preco: "R$ 0,00",
+    Preco: "R$ 239,00",
     nome: "Pijama Lilas Liso Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/LilasLiso.png",
@@ -46,7 +46,7 @@ const produtos = [
   },
   {
     id: 5,
-    Preco: "R$ 0,00",
+    Preco: "R$ 269,00",
     nome: "Pijama Lilas Liso - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/LilasLiso.png",
@@ -55,7 +55,7 @@ const produtos = [
   },
   {
     id: 6,
-    Preco: "R$ 0,00",
+    Preco: "R$ 219,00",
     nome: "Pijama Azul com Vermelho Bolinhas - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulVermelho.png",
@@ -64,7 +64,7 @@ const produtos = [
   },
   {
     id: 7,
-    Preco: "R$ 0,00",
+    Preco: "R$ 249,00",
      nome: "Pijama Azul com Vermelho Bolinhas - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulVermelho.png",
@@ -73,7 +73,7 @@ const produtos = [
   },
   {
     id: 8,
-    Preco: "R$ 0,00",
+    Preco: "R$ 239,00",
     nome: "Pijama Verde com Bolinhas - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/VerdeBolinhas.png",
@@ -82,7 +82,7 @@ const produtos = [
   },
   {
     id: 9,
-    Preco: "R$ 0,00",
+    Preco: "R$ 249,00",
     nome: "Pijama Preto  com Bolinhas - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoBolinhas.png",
@@ -91,7 +91,7 @@ const produtos = [
   },
   {
     id: 10,
-    Preco: "R$ 0,00",
+    Preco: "R$ 219,00",
     nome: "Pijama Preto  com Bolinhas - Manga Curta + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PretoBolinhas.png",
@@ -100,7 +100,7 @@ const produtos = [
   },
   {
     id: 11,
-    Preco: "R$ 0,00",
+    Preco: "R$ 199,00",
     nome: "Pijama Azul com Bolinhas",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/AzulBolinhas.png",
@@ -109,7 +109,7 @@ const produtos = [
   },
   {
     id: 12,
-    Preco: "R$ 0,00",
+    Preco: "R$ ",
     nome: "Pijama Pink com Azul - Manga Longa + Calça",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
@@ -118,8 +118,8 @@ const produtos = [
   },
    {
     id: 13,
-    Preco: "R$ 0,00",
-    nome: "Pijama Pink com Azul - Manga Curta + Shorts",
+    Preco: "R$ 219,00",
+    nome: "Pijama Pink com Azul - Manga Longa + Shorts",
     descricao: "Pijama confortável e elegante, produzido com tecido macio e ideal para noites tranquilas.",
     imagem: "pijamas/PinkAzul.png",
     tamanhos: ["GG"],
